@@ -1,0 +1,4 @@
+C:\Users\icesun\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Microsoft\C# Single File Generator Sample\1.0\\GeneratorSample.dll
+C:\Users\icesun\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Microsoft\C# Single File Generator Sample\1.0\\GeneratorSample.pkgdef
+C:\Users\icesun\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Microsoft\C# Single File Generator Sample\1.0\\extension.vsixmanifest
+C:\Users\icesun\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Microsoft\C# Single File Generator Sample\1.0\\GeneratorSample.pdb

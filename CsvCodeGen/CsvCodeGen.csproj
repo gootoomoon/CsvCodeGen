@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F9F20EC4-A85E-4B51-BBDF-D2C185BCDA14}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CsvCodeGen</RootNamespace>
+    <AssemblyName>CsvCodeGen</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\TankApp\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\VSAddIn\Addin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SOAP;MONO;LEGACY;UNITY_4_0;SILVERLIGHT;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GeneratorLoader\ToCS\BasePlug.cs">
+      <Link>BasePlug.cs</Link>
+    </Compile>
+    <Compile Include="..\GeneratorLoader\ToCS\Serializable.cs">
+      <Link>Serializable.cs</Link>
+    </Compile>
+    <Compile Include="ConfigAttribute.cs" />
+    <Compile Include="ConfigAutoParseAttribute.cs" />
+    <None Include="Tpl\ConfigHelper.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Compile Include="CsvCodeBuilder.cs" />
+    <Compile Include="ExcelCode\ExcelCodeBuilder.cs" />
+    <Compile Include="Lib\Core\Binary12Format\Enums.cs" />
+    <Compile Include="Lib\Core\Binary12Format\XlsbDimension.cs" />
+    <Compile Include="Lib\Core\Binary12Format\XlsbNumFmt.cs" />
+    <Compile Include="Lib\Core\Binary12Format\XlsbRecord.cs" />
+    <Compile Include="Lib\Core\Binary12Format\XlsbSST.cs" />
+    <Compile Include="Lib\Core\Binary12Format\XlsbStyles.cs" />
+    <Compile Include="Lib\Core\Binary12Format\XlsbWorkbook.cs" />
+    <Compile Include="Lib\Core\Binary12Format\XlsbWorksheet.cs" />
+    <Compile Include="Lib\Core\Binary12Format\XlsbXf.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\Enums.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffBlankCell.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffBOF.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffBoundSheet.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffContinue.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffDbCell.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffDimensions.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffEOF.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffFormatString.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffFormulaCell.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffFormulaString.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffIndex.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffIntegerCell.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffInterfaceHdr.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffLabelCell.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffLabelSSTCell.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffMulBlankCell.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffMulRKCell.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffNumberCell.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffQuickTip.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffRecord.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffRKCell.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffRow.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffSimpleValueRecord.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffSST.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffStream.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffUncalced.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsBiffWindow1.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsDirectoryEntry.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsFat.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsFormattedUnicodeString.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsHeader.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsRootDirectory.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsStream.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsWorkbookGlobals.cs" />
+    <Compile Include="Lib\Core\BinaryFormat\XlsWorksheet.cs" />
+    <Compile Include="Lib\Core\FormatReader.cs" />
+    <Compile Include="Lib\Core\Helpers.cs" />
+    <Compile Include="Lib\Core\OpenXmlFormat\XlsxDimension.cs" />
+    <Compile Include="Lib\Core\OpenXmlFormat\XlsxNumFmt.cs" />
+    <Compile Include="Lib\Core\OpenXmlFormat\XlsxSST.cs" />
+    <Compile Include="Lib\Core\OpenXmlFormat\XlsxStyles.cs" />
+    <Compile Include="Lib\Core\OpenXmlFormat\XlsxWorkbook.cs" />
+    <Compile Include="Lib\Core\OpenXmlFormat\XlsxWorksheet.cs" />
+    <Compile Include="Lib\Core\OpenXmlFormat\XlsxXf.cs" />
+    <Compile Include="Lib\Core\OpenXmlFormat\XmlReaderExtensions.cs" />
+    <Compile Include="Lib\Core\ZipWorker.cs" />
+    <Compile Include="Lib\Errors.cs" />
+    <Compile Include="Lib\ExcelBinaryReader.cs" />
+    <Compile Include="Lib\ExcelOpenXmlReader.cs" />
+    <Compile Include="Lib\ExcelReaderFactory.cs" />
+    <Compile Include="Lib\Exceptions\BiffRecordException.cs" />
+    <Compile Include="Lib\Exceptions\HeaderException.cs" />
+    <Compile Include="Lib\fastJSON\dynamic.cs" />
+    <Compile Include="Lib\fastJSON\Formatter.cs" />
+    <Compile Include="Lib\fastJSON\Getters.cs" />
+    <Compile Include="Lib\fastJSON\JSON.cs" />
+    <Compile Include="Lib\fastJSON\JsonParser.cs" />
+    <Compile Include="Lib\fastJSON\JsonSerializer.cs" />
+    <Compile Include="Lib\fastJSON\Reflection.cs" />
+    <Compile Include="Lib\fastJSON\SafeDictionary.cs" />
+    <Compile Include="Lib\IExcelDataReader.cs" />
+    <Compile Include="Lib\Log\ILog.cs" />
+    <Compile Include="Lib\Log\Log.cs" />
+    <Compile Include="Lib\Log\Logger\NullLog.cs" />
+    <Compile Include="Lib\Log\LogManager.cs" />
+    <Compile Include="Lib\Log\StringExtensions.cs" />
+    <Compile Include="Lib\SharpZipLib\BZip2\BZip2.cs" />
+    <Compile Include="Lib\SharpZipLib\BZip2\BZip2Constants.cs" />
+    <Compile Include="Lib\SharpZipLib\BZip2\BZip2Exception.cs" />
+    <Compile Include="Lib\SharpZipLib\BZip2\BZip2InputStream.cs" />
+    <Compile Include="Lib\SharpZipLib\BZip2\BZip2OutputStream.cs" />
+    <Compile Include="Lib\SharpZipLib\Checksums\Adler32.cs" />
+    <Compile Include="Lib\SharpZipLib\Checksums\CRC32.cs" />
+    <Compile Include="Lib\SharpZipLib\Checksums\IChecksum.cs" />
+    <Compile Include="Lib\SharpZipLib\Checksums\StrangeCRC.cs" />
+    <Compile Include="Lib\SharpZipLib\Core\FileSystemScanner.cs" />
+    <Compile Include="Lib\SharpZipLib\Core\INameTransform.cs" />
+    <Compile Include="Lib\SharpZipLib\Core\IScanFilter.cs" />
+    <Compile Include="Lib\SharpZipLib\Core\NameFilter.cs" />
+    <Compile Include="Lib\SharpZipLib\Core\PathFilter.cs" />
+    <Compile Include="Lib\SharpZipLib\Core\StreamUtils.cs" />
+    <Compile Include="Lib\SharpZipLib\Core\WindowsPathUtils.cs" />
+    <Compile Include="Lib\SharpZipLib\Encryption\PkzipClassic.cs" />
+    <Compile Include="Lib\SharpZipLib\Encryption\ZipAESStream.cs" />
+    <Compile Include="Lib\SharpZipLib\Encryption\ZipAESTransform.cs" />
+    <Compile Include="Lib\SharpZipLib\GZip\GZIPConstants.cs" />
+    <Compile Include="Lib\SharpZipLib\GZip\GZipException.cs" />
+    <Compile Include="Lib\SharpZipLib\GZip\GzipInputStream.cs" />
+    <Compile Include="Lib\SharpZipLib\GZip\GzipOutputStream.cs" />
+    <Compile Include="Lib\SharpZipLib\Lzw\LzwConstants.cs" />
+    <Compile Include="Lib\SharpZipLib\Lzw\LzwException.cs" />
+    <Compile Include="Lib\SharpZipLib\Lzw\LzwInputStream.cs" />
+    <Compile Include="Lib\SharpZipLib\SharpZipBaseException.cs" />
+    <Compile Include="Lib\SharpZipLib\Tar\InvalidHeaderException.cs" />
+    <Compile Include="Lib\SharpZipLib\Tar\TarArchive.cs" />
+    <Compile Include="Lib\SharpZipLib\Tar\TarBuffer.cs" />
+    <Compile Include="Lib\SharpZipLib\Tar\TarEntry.cs" />
+    <Compile Include="Lib\SharpZipLib\Tar\TarException.cs" />
+    <Compile Include="Lib\SharpZipLib\Tar\TarHeader.cs" />
+    <Compile Include="Lib\SharpZipLib\Tar\TarInputStream.cs" />
+    <Compile Include="Lib\SharpZipLib\Tar\TarOutputStream.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\Compression\Deflater.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\Compression\DeflaterConstants.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\Compression\DeflaterEngine.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\Compression\DeflaterHuffman.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\Compression\DeflaterPending.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\Compression\Inflater.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\Compression\InflaterDynHeader.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\Compression\InflaterHuffmanTree.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\Compression\PendingBuffer.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\Compression\Streams\DeflaterOutputStream.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\Compression\Streams\InflaterInputStream.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\Compression\Streams\OutputWindow.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\Compression\Streams\StreamManipulator.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\FastZip.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\IEntryFactory.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\WindowsNameTransform.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\ZipConstants.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\ZipEntry.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\ZipEntryFactory.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\ZipException.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\ZipExtraData.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\ZipFile.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\ZipHelperStream.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\ZipInputStream.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\ZipNameTransform.cs" />
+    <Compile Include="Lib\SharpZipLib\Zip\ZipOutputStream.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tpl\nameMap.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tpl\typeMap.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

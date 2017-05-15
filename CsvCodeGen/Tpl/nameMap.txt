@@ -1,0 +1,7 @@
+
+#srcurl|http://fanyi.baidu.com/v2transapi?from=zh&to=en&query={src}
+#这是百度翻译接口
+#dstmath|"dst":"(?<dst>([A-Z0-9a-z\s]+))"
+#这是结果获取
+#xmlout|./
+#这是xml输出路径，默认可以不用去改

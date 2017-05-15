@@ -1,0 +1,9 @@
+﻿为忽略当前行
+#针对某个表的特定可进行
+#表翻译.字段
+#Name|type
+ID | int
+字段名称 | 枚举
+#怪物表中的五行字段|强制为枚举类型
+MonsterTable.五行 | Enum_TheFiveLine
+

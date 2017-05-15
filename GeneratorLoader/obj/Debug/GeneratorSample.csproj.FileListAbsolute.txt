@@ -1,0 +1,14 @@
+E:\Users\icesun\Desktop\C#\bin\Debug\GeneratorSample.xml
+E:\Users\icesun\Desktop\C#\bin\Debug\GeneratorSample.dll
+E:\Users\icesun\Desktop\C#\bin\Debug\GeneratorSample.pdb
+E:\Users\icesun\Desktop\C#\bin\Debug\GeneratorSample.pkgdef
+E:\Users\icesun\Desktop\C#\bin\Debug\GeneratorSample.vsix
+E:\Users\icesun\Desktop\C#\bin\Debug\extension.vsixmanifest
+E:\Users\icesun\Desktop\C#\obj\Debug\GeneratorSample.g.resources
+E:\Users\icesun\Desktop\C#\obj\Debug\Microsoft.Samples.VisualStudio.GeneratorSample.Strings.resources
+E:\Users\icesun\Desktop\C#\obj\Debug\GeneratorSample.csproj.GenerateResource.Cache
+E:\Users\icesun\Desktop\C#\obj\Debug\GeneratorSample.dll
+E:\Users\icesun\Desktop\C#\obj\Debug\GeneratorSample.pdb
+E:\Users\icesun\Desktop\C#\obj\Debug\GeneratorSample.pkgdef
+E:\Users\icesun\Desktop\C#\obj\Debug\GeneratorSample.latest.pkgdef
+E:\Users\icesun\Desktop\C#\obj\Debug\extension.vsixmanifest

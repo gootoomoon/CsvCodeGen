@@ -1,0 +1,1322 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CsvCodeGen</name>
+    </assembly>
+    <members>
+        <member name="P:FileGenLoaderDomain.BasePlug.Exction">
+            <summary>
+            扩展名
+            </summary>
+        </member>
+        <member name="T:CsvCodeGen.ConfigAttribute">
+            <summary>
+            配置属性
+            </summary>
+        </member>
+        <member name="P:CsvCodeGen.ConfigAttribute.Index">
+            <summary>
+            数据所在节点(必须)
+            </summary>
+        </member>
+        <member name="P:CsvCodeGen.ConfigAttribute.DefaultValue">
+            <summary>
+            默认值(非必须)
+            </summary>
+        </member>
+        <member name="P:CsvCodeGen.ConfigAttribute.IsKey">
+            <summary>
+            是否是关键字段(必须有一个)
+            </summary>
+        </member>
+        <member name="P:CsvCodeGen.ConfigAttribute.IsList">
+            <summary>
+            是否是列表(非必须)
+            </summary>
+        </member>
+        <member name="P:CsvCodeGen.ConfigAttribute.Desc">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="T:CsvCodeGen.ConfigAutoParseAttribute">
+            <summary>
+            解析属性
+            </summary>
+        </member>
+        <!-- 对于成员“M:CsvCodeGen.CsvCodeBuilder.GetTranslateByUrl(System.String,System.String,System.String,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="F:Excel.Core.BinaryFormat.BIFFRECORDTYPE.UNCALCED">
+            <summary>
+            If present the Calculate Message was in the status bar when Excel saved the file.
+            This occurs if the sheet changed, the Manual calculation option was on, and the Recalculate Before Save option was off.        
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffBlankCell">
+            <summary>
+            Represents blank cell
+            Base class for all cell types
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffRecord">
+            <summary>
+            Represents basic BIFF record
+            Base class for all BIFF record types
+            </summary>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsBiffRecord.GetRecord(System.Byte[],System.UInt32,Excel.ExcelBinaryReader)">
+            <summary>
+            Returns record at specified offset
+            </summary>
+            <param name="bytes">byte array</param>
+            <param name="offset">position in array</param>
+            <param name="reader"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffRecord.ID">
+            <summary>
+            Returns type ID of this entry
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffRecord.RecordSize">
+            <summary>
+            Returns data size of this entry
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffRecord.Size">
+            <summary>
+            Returns whole size of structure
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffBlankCell.RowIndex">
+            <summary>
+            Zero-based index of row containing this cell
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffBlankCell.ColumnIndex">
+            <summary>
+            Zero-based index of column containing this cell
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffBlankCell.XFormat">
+            <summary>
+            Format used for this cell
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffBOF">
+            <summary>
+            Represents BIFF BOF record
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffBOF.Version">
+            <summary>
+            Version
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffBOF.Type">
+            <summary>
+            Type of BIFF block
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffBOF.CreationID">
+            <summary>
+            Creation ID
+            </summary>
+            <remarks>Not used before BIFF5</remarks>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffBOF.CreationYear">
+            <summary>
+            Creation year
+            </summary>
+            <remarks>Not used before BIFF5</remarks>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffBOF.HistoryFlag">
+            <summary>
+            File history flag
+            </summary>
+            <remarks>Not used before BIFF8</remarks>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffBOF.MinVersionToOpen">
+            <summary>
+            Minimum Excel version to open this file
+            </summary>
+            <remarks>Not used before BIFF8</remarks>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffBoundSheet">
+            <summary>
+            Represents Sheet record in Workbook Globals
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffBoundSheet.StartOffset">
+            <summary>
+            Worksheet data start offset
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffBoundSheet.Type">
+            <summary>
+            Type of worksheet
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffBoundSheet.VisibleState">
+            <summary>
+            Visibility of worksheet
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffBoundSheet.SheetName">
+            <summary>
+            Name of worksheet
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffBoundSheet.UseEncoding">
+            <summary>
+            Encoding used to deal with strings
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffBoundSheet.IsV8">
+            <summary>
+            Specifies if BIFF8 format should be used
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffContinue">
+            <summary>
+            Represents additional space for very large records
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffDbCell">
+            <summary>
+            Represents cell-indexing record, finishes each row values block
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffDbCell.RowAddress">
+            <summary>
+            Offset of first row linked with this record
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffDbCell.CellAddresses">
+            <summary>
+            Addresses of cell values
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffDimensions">
+            <summary>
+            Represents Dimensions of worksheet
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffDimensions.IsV8">
+            <summary>
+            Gets or sets if BIFF8 addressing is used
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffDimensions.FirstRow">
+            <summary>
+            Index of first row
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffDimensions.LastRow">
+            <summary>
+            Index of last row + 1
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffDimensions.FirstColumn">
+            <summary>
+            Index of first column
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffDimensions.LastColumn">
+            <summary>
+            Index of last column + 1
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffEOF">
+            <summary>
+            Represents BIFF EOF resord
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffFormatString">
+            <summary>
+            Represents a string value of formula
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffFormatString.UseEncoding">
+            <summary>
+            Encoding used to deal with strings
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffFormatString.Length">
+            <summary>
+            Length of the string
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffFormatString.Value">
+            <summary>
+            String text
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffFormulaCell">
+            <summary>
+            Represents a cell containing formula
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffNumberCell">
+            <summary>
+            Represents a floating-point number 
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffNumberCell.Value">
+            <summary>
+            Returns value of this cell
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffFormulaCell.UseEncoding">
+            <summary>
+            Encoding used to deal with strings
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffFormulaCell.Flags">
+            <summary>
+            Formula flags
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffFormulaCell.FormulaLength">
+            <summary>
+            Length of formula string
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffFormulaCell.Value">
+            <summary>
+            Returns type-dependent value of formula
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffFormulaString">
+            <summary>
+            Represents a string value of formula
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffFormulaString.UseEncoding">
+            <summary>
+            Encoding used to deal with strings
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffFormulaString.Length">
+            <summary>
+            Length of the string
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffFormulaString.Value">
+            <summary>
+            String text
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffIndex">
+            <summary>
+            Represents a worksheet index
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffIndex.IsV8">
+            <summary>
+            Gets or sets if BIFF8 addressing is used
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffIndex.FirstExistingRow">
+            <summary>
+            Returns zero-based index of first existing row
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffIndex.LastExistingRow">
+            <summary>
+            Returns zero-based index of last existing row
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffIndex.DbCellAddresses">
+            <summary>
+            Returns addresses of DbCell records
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffIntegerCell">
+            <summary>
+            Represents a constant integer number in range 0..65535
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffIntegerCell.Value">
+            <summary>
+            Returns value of this cell
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffInterfaceHdr">
+            <summary>
+            Represents InterfaceHdr record in Wokrbook Globals
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffInterfaceHdr.CodePage">
+            <summary>
+            Returns CodePage for Interface Header
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffLabelCell">
+            <summary>
+            Represents a string (max 255 bytes)
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffLabelCell.UseEncoding">
+            <summary>
+            Encoding used to deal with strings
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffLabelCell.Length">
+            <summary>
+            Length of string value
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffLabelCell.Value">
+            <summary>
+            Returns value of this cell
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffLabelSSTCell">
+            <summary>
+            Represents a string stored in SST
+            </summary>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsBiffLabelSSTCell.Text(Excel.Core.BinaryFormat.XlsBiffSST)">
+            <summary>
+            Returns text using specified SST
+            </summary>
+            <param name="sst">Shared String Table record</param>
+            <returns></returns>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffLabelSSTCell.SSTIndex">
+            <summary>
+            Index of string in Shared String Table
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffMulBlankCell">
+            <summary>
+            Represents multiple Blank cell
+            </summary>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsBiffMulBlankCell.GetXF(System.UInt16)">
+            <summary>
+            Returns format forspecified column, column must be between ColumnIndex and LastColumnIndex
+            </summary>
+            <param name="ColumnIdx">Index of column</param>
+            <returns>Format</returns>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffMulBlankCell.LastColumnIndex">
+            <summary>
+            Zero-based index of last described column
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffMulRKCell">
+            <summary>
+            Represents multiple RK number cells
+            </summary>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsBiffMulRKCell.GetXF(System.UInt16)">
+            <summary>
+            Returns format for specified column
+            </summary>
+            <param name="ColumnIdx">Index of column, must be between ColumnIndex and LastColumnIndex</param>
+            <returns></returns>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsBiffMulRKCell.GetValue(System.UInt16)">
+            <summary>
+            Returns value for specified column
+            </summary>
+            <param name="ColumnIdx">Index of column, must be between ColumnIndex and LastColumnIndex</param>
+            <returns></returns>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffMulRKCell.LastColumnIndex">
+            <summary>
+            Returns zero-based index of last described column
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffQuickTip">
+            <summary>
+            For now QuickTip will do nothing, it seems to have a different
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffRKCell">
+            <summary>
+            Represents an RK number cell
+            </summary>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsBiffRKCell.NumFromRK(System.UInt32)">
+            <summary>
+            Decodes RK-encoded number
+            </summary>
+            <param name="rk">Encoded number</param>
+            <returns></returns>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffRKCell.Value">
+            <summary>
+            Returns value of this cell
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffRow">
+            <summary>
+            Represents row record in table
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffRow.RowIndex">
+            <summary>
+            Zero-based index of row described
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffRow.FirstDefinedColumn">
+            <summary>
+            Index of first defined column
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffRow.LastDefinedColumn">
+            <summary>
+            Index of last defined column
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffRow.RowHeight">
+            <summary>
+            Returns row height
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffRow.Flags">
+            <summary>
+            Returns row flags
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffRow.XFormat">
+            <summary>
+            Returns default format for this row
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffSimpleValueRecord">
+            <summary>
+            Represents record with the only two-bytes value
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffSimpleValueRecord.Value">
+            <summary>
+            Returns value
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffSST">
+            <summary>
+            Represents a Shared String Table in BIFF8 format
+            </summary>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsBiffSST.ReadStrings">
+            <summary>
+            Reads strings from BIFF stream into SST array
+            </summary>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsBiffSST.GetString(System.UInt32)">
+            <summary>
+            Returns string at specified index
+            </summary>
+            <param name="SSTIndex">Index of string to get</param>
+            <returns>string value if it was found, empty string otherwise</returns>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsBiffSST.Append(Excel.Core.BinaryFormat.XlsBiffContinue)">
+            <summary>
+            Appends Continue record to SST
+            </summary>
+            <param name="fragment">Continue record</param>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffSST.Count">
+            <summary>
+            Returns count of strings in SST
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffSST.UniqueCount">
+            <summary>
+            Returns count of unique strings in SST
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffStream">
+            <summary>
+            Represents a BIFF stream
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsStream">
+            <summary>
+            Represents an Excel file stream
+            </summary>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsStream.ReadStream">
+            <summary>
+            Reads stream data from file
+            </summary>
+            <returns>Stream data</returns>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsStream.BaseOffset">
+            <summary>
+            Returns offset of first stream sector
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsStream.BaseSector">
+            <summary>
+            Returns number of first stream sector
+            </summary>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsBiffStream.ReadStream">
+            <summary>
+            Always returns null, use biff-specific methods
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsBiffStream.Seek(System.Int32,System.IO.SeekOrigin)">
+            <summary>
+            Sets stream pointer to the specified offset
+            </summary>
+            <param name="offset">Offset value</param>
+            <param name="origin">Offset origin</param>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsBiffStream.Read">
+            <summary>
+            Reads record under cursor and advances cursor position to next record
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsBiffStream.ReadAt(System.Int32)">
+            <summary>
+            Reads record at specified offset, does not change cursor position
+            </summary>
+            <param name="offset"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffStream.Size">
+            <summary>
+            Returns size of BIFF stream in bytes
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffStream.Position">
+            <summary>
+            Returns current position in BIFF stream
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffUncalced">
+            <summary>
+            If present the Calculate Message was in the status bar when Excel saved the file.
+            This occurs if the sheet changed, the Manual calculation option was on, and the Recalculate Before Save option was off.    
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsBiffWindow1">
+            <summary>
+            Represents Workbook's global window description
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffWindow1.Left">
+            <summary>
+            Returns X position of a window
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffWindow1.Top">
+            <summary>
+            Returns Y position of a window
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffWindow1.Width">
+            <summary>
+            Returns width of a window
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffWindow1.Height">
+            <summary>
+            Returns height of a window
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffWindow1.Flags">
+            <summary>
+            Returns window flags
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffWindow1.ActiveTab">
+            <summary>
+            Returns active workbook tab (zero-based)
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffWindow1.FirstVisibleTab">
+            <summary>
+            Returns first visible workbook tab (zero-based)
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffWindow1.SelectedTabCount">
+            <summary>
+            Returns number of selected workbook tabs
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsBiffWindow1.TabRatio">
+            <summary>
+            Returns workbook tab width to horizontal scrollbar width
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsDirectoryEntry">
+            <summary>
+            Represents single Root Directory record
+            </summary>
+        </member>
+        <member name="F:Excel.Core.BinaryFormat.XlsDirectoryEntry.Length">
+            <summary>
+            Length of structure in bytes
+            </summary>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsDirectoryEntry.#ctor(System.Byte[],Excel.Core.BinaryFormat.XlsHeader)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="bytes">byte array representing current object</param>
+            <param name="header"></param>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsDirectoryEntry.EntryName">
+            <summary>
+            Returns name of directory entry
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsDirectoryEntry.EntryLength">
+            <summary>
+            Returns size in bytes of entry's name (with terminating zero)
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsDirectoryEntry.EntryType">
+            <summary>
+            Returns entry type
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsDirectoryEntry.EntryColor">
+            <summary>
+            Retuns entry "color" in directory tree
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsDirectoryEntry.LeftSiblingSid">
+            <summary>
+            Returns SID of left sibling
+            </summary>
+            <remarks>0xFFFFFFFF if there's no one</remarks>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsDirectoryEntry.LeftSibling">
+            <summary>
+            Returns left sibling
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsDirectoryEntry.RightSiblingSid">
+            <summary>
+            Returns SID of right sibling
+            </summary>
+            <remarks>0xFFFFFFFF if there's no one</remarks>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsDirectoryEntry.RightSibling">
+            <summary>
+            Returns right sibling
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsDirectoryEntry.ChildSid">
+            <summary>
+            Returns SID of first child (if EntryType is STGTY_STORAGE)
+            </summary>
+            <remarks>0xFFFFFFFF if there's no one</remarks>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsDirectoryEntry.Child">
+            <summary>
+            Returns child
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsDirectoryEntry.ClassId">
+            <summary>
+            CLSID of container (if EntryType is STGTY_STORAGE)
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsDirectoryEntry.UserFlags">
+            <summary>
+            Returns user flags of container (if EntryType is STGTY_STORAGE)
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsDirectoryEntry.CreationTime">
+            <summary>
+            Returns creation time of entry
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsDirectoryEntry.LastWriteTime">
+            <summary>
+            Returns last modification time of entry
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsDirectoryEntry.StreamFirstSector">
+            <summary>
+            First sector of data stream (if EntryType is STGTY_STREAM)
+            </summary>
+            <remarks>if EntryType is STGTY_ROOT, this can be first sector of MiniStream</remarks>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsDirectoryEntry.StreamSize">
+            <summary>
+            Size of data stream (if EntryType is STGTY_STREAM)
+            </summary>
+            <remarks>if EntryType is STGTY_ROOT, this can be size of MiniStream</remarks>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsDirectoryEntry.IsEntryMiniStream">
+            <summary>
+            Determines whether this entry relats to a ministream
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsDirectoryEntry.PropType">
+            <summary>
+            Reserved, must be 0
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsFat">
+            <summary>
+            Represents Excel file FAT table
+            </summary>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsFat.#ctor(Excel.Core.BinaryFormat.XlsHeader,System.Collections.Generic.List{System.UInt32},System.Int32,System.Boolean,Excel.Core.BinaryFormat.XlsRootDirectory)">
+            <summary>
+            Constructs FAT table from list of sectors
+            </summary>
+            <param name="hdr">XlsHeader</param>
+            <param name="sectors">Sectors list</param>
+            <param name="sizeOfSector"></param>
+            <param name="isMini"></param>
+            <param name="rootDir"></param>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsFat.GetNextSector(System.UInt32)">
+            <summary>
+            Returns next data sector using FAT
+            </summary>
+            <param name="sector">Current data sector</param>
+            <returns>Next data sector</returns>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsFat.SectorsForFat">
+            <summary>
+            Resurns number of sectors used by FAT itself
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsFat.SectorsCount">
+            <summary>
+            Returns number of sectors described by FAT
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsFat.Header">
+            <summary>
+            Returns underlying XlsHeader object
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsFormattedUnicodeString">
+            <summary>
+            Represents formatted unicode string in SST
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsFormattedUnicodeString.CharacterCount">
+            <summary>
+            Count of characters in string
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsFormattedUnicodeString.Flags">
+            <summary>
+            String flags
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsFormattedUnicodeString.HasExtString">
+            <summary>
+            Checks if string has Extended record
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsFormattedUnicodeString.HasFormatting">
+            <summary>
+            Checks if string has formatting
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsFormattedUnicodeString.IsMultiByte">
+            <summary>
+            Checks if string is unicode
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsFormattedUnicodeString.ByteCount">
+            <summary>
+            Returns length of string in bytes
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsFormattedUnicodeString.FormatCount">
+            <summary>
+            Returns number of formats used for formatting (0 if string has no formatting)
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsFormattedUnicodeString.ExtendedStringSize">
+            <summary>
+            Returns size of extended string in bytes, 0 if there is no one
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsFormattedUnicodeString.HeadSize">
+            <summary>
+            Returns head (before string data) size in bytes
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsFormattedUnicodeString.TailSize">
+            <summary>
+            Returns tail (after string data) size in bytes
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsFormattedUnicodeString.Size">
+            <summary>
+            Returns size of whole record in bytes
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsFormattedUnicodeString.Value">
+            <summary>
+            Returns string represented by this instance
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsHeader">
+            <summary>
+            Represents Excel file header
+            </summary>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsHeader.GetMiniFAT(Excel.Core.BinaryFormat.XlsRootDirectory)">
+            <summary>
+            Returns mini FAT table
+            </summary>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsHeader.ReadHeader(System.IO.Stream)">
+            <summary>
+            Reads Excel header from Stream
+            </summary>
+            <param name="file">Stream with Excel file</param>
+            <returns>XlsHeader representing specified file</returns>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsHeader.Signature">
+            <summary>
+            Returns file signature
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsHeader.IsSignatureValid">
+            <summary>
+            Checks if file signature is valid
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsHeader.ClassId">
+            <summary>
+            Typically filled with zeroes
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsHeader.Version">
+            <summary>
+            Must be 0x003E
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsHeader.DllVersion">
+            <summary>
+            Must be 0x0003
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsHeader.ByteOrder">
+            <summary>
+            Must be 0xFFFE
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsHeader.SectorSize">
+            <summary>
+            Typically 512
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsHeader.MiniSectorSize">
+            <summary>
+            Typically 64
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsHeader.FatSectorCount">
+            <summary>
+            Number of FAT sectors
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsHeader.RootDirectoryEntryStart">
+            <summary>
+            Number of first Root Directory Entry (Property Set Storage, FAT Directory) sector
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsHeader.TransactionSignature">
+            <summary>
+            Transaction signature, 0 for Excel
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsHeader.MiniStreamCutoff">
+            <summary>
+            Maximum size for small stream, typically 4096 bytes
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsHeader.MiniFatFirstSector">
+            <summary>
+            First sector of Mini FAT, FAT_EndOfChain if there's no one
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsHeader.MiniFatSectorCount">
+            <summary>
+            Number of sectors in Mini FAT, 0 if there's no one
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsHeader.DifFirstSector">
+            <summary>
+            First sector of DIF, FAT_EndOfChain if there's no one
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsHeader.DifSectorCount">
+            <summary>
+            Number of sectors in DIF, 0 if there's no one
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsHeader.FAT">
+            <summary>
+            Returns full FAT table, including DIF sectors
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsRootDirectory">
+            <summary>
+            Represents Root Directory in file
+            </summary>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsRootDirectory.#ctor(Excel.Core.BinaryFormat.XlsHeader)">
+            <summary>
+            Creates Root Directory catalog from XlsHeader
+            </summary>
+            <param name="hdr">XlsHeader object</param>
+        </member>
+        <member name="M:Excel.Core.BinaryFormat.XlsRootDirectory.FindEntry(System.String)">
+            <summary>
+            Searches for first matching entry by its name
+            </summary>
+            <param name="EntryName">String name of entry</param>
+            <returns>Entry if found, null otherwise</returns>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsRootDirectory.Entries">
+            <summary>
+            Returns all entries in Root Directory
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsRootDirectory.RootEntry">
+            <summary>
+            Returns the Root Entry
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsWorkbookGlobals">
+            <summary>
+            Represents Globals section of workbook
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsWorkbookGlobals.SST">
+            <summary>
+            Shared String Table of workbook
+            </summary>
+        </member>
+        <member name="T:Excel.Core.BinaryFormat.XlsWorksheet">
+            <summary>
+            Represents Worksheet section in workbook
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsWorksheet.Name">
+            <summary>
+            Name of worksheet
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsWorksheet.Index">
+            <summary>
+            Zero-based index of worksheet
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsWorksheet.DataOffset">
+            <summary>
+            Offset of worksheet data
+            </summary>
+        </member>
+        <member name="P:Excel.Core.BinaryFormat.XlsWorksheet.Dimensions">
+            <summary>
+            Dimensions of worksheet
+            </summary>
+        </member>
+        <member name="T:Excel.Core.Helpers">
+            <summary>
+            Helpers class
+            </summary>
+        </member>
+        <member name="M:Excel.Core.Helpers.IsSingleByteEncoding(System.Text.Encoding)">
+            <summary>
+            Determines whether [is single byte] [the specified encoding].
+            </summary>
+            <param name="encoding">The encoding.</param>
+            <returns>
+            	<c>true</c> if [is single byte] [the specified encoding]; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Excel.Core.OpenXmlFormat.XlsxDimension.XlsxDim(System.String,System.Int32@,System.Int32@)">
+            <summary>
+            Logic for the Excel dimensions. Ex: A15
+            </summary>
+            <param name="value">The value.</param>
+            <param name="val1">out val1.</param>
+            <param name="val2">out val2.</param>
+        </member>
+        <member name="T:Excel.Core.OpenXmlFormat.XlsxSST">
+            <summary>
+            Shared string table
+            </summary>
+        </member>
+        <member name="M:Excel.Core.ZipWorker.Extract(System.IO.Stream)">
+            <summary>
+            Extracts the specified zip file stream.
+            </summary>
+            <param name="fileStream">The zip file stream.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Excel.Core.ZipWorker.GetSharedStringsStream">
+            <summary>
+            Gets the shared strings stream.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Excel.Core.ZipWorker.GetStylesStream">
+            <summary>
+            Gets the styles stream.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Excel.Core.ZipWorker.GetWorkbookStream">
+            <summary>
+            Gets the workbook stream.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Excel.Core.ZipWorker.GetWorksheetStream(System.Int32)">
+            <summary>
+            Gets the worksheet stream.
+            </summary>
+            <param name="sheetId">The sheet id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Excel.Core.ZipWorker.GetWorkbookRelsStream">
+            <summary>
+            Gets the workbook rels stream.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:Excel.Core.ZipWorker.IsValid">
+            <summary>
+            Gets a value indicating whether this instance is valid.
+            </summary>
+            <value><c>true</c> if this instance is valid; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Excel.Core.ZipWorker.TempPath">
+            <summary>
+            Gets the temp path for extracted files.
+            </summary>
+            <value>The temp path for extracted files.</value>
+        </member>
+        <member name="P:Excel.Core.ZipWorker.ExceptionMessage">
+            <summary>
+            Gets the exception message.
+            </summary>
+            <value>The exception message.</value>
+        </member>
+        <member name="T:Excel.ExcelBinaryReader">
+            <summary>
+            ExcelDataReader Class
+            </summary>
+        </member>
+        <member name="M:Excel.IExcelDataReader.Initialize(System.IO.Stream)">
+            <summary>
+            Initializes the instance with specified file stream.
+            </summary>
+            <param name="fileStream">The file stream.</param>
+        </member>
+        <member name="M:Excel.IExcelDataReader.AsDataSet">
+            <summary>
+            Read all data in to DataSet and return it
+            </summary>
+            <returns>The DataSet</returns>
+        </member>
+        <member name="M:Excel.IExcelDataReader.AsDataSet(System.Boolean)">
+             <summary>
+            Read all data in to DataSet and return it
+             </summary>
+             <param name="convertOADateTime">if set to <c>true</c> [try auto convert OA date time format].</param>
+             <returns>The DataSet</returns>
+        </member>
+        <member name="P:Excel.IExcelDataReader.IsValid">
+            <summary>
+            Gets a value indicating whether file stream is valid.
+            </summary>
+            <value><c>true</c> if file stream is valid; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Excel.IExcelDataReader.ExceptionMessage">
+            <summary>
+            Gets the exception message in case of error.
+            </summary>
+            <value>The exception message.</value>
+        </member>
+        <member name="P:Excel.IExcelDataReader.Name">
+            <summary>
+            Gets the sheet name.
+            </summary>
+            <value>The sheet name.</value>
+        </member>
+        <member name="P:Excel.IExcelDataReader.ResultsCount">
+            <summary>
+            Gets the number of results (workbooks).
+            </summary>
+            <value>The results count.</value>
+        </member>
+        <member name="P:Excel.IExcelDataReader.IsFirstRowAsColumnNames">
+            <summary>
+            Gets or sets a value indicating whether the first row contains the column names.
+            </summary>
+            <value>
+            	<c>true</c> if the first row contains column names; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="T:Excel.ReadOption">
+            <summary>
+            Strict is as normal, Loose is more forgiving and will not cause an exception if a record size takes it beyond the end of the file. It will be trunacted in this case (SQl Reporting Services)
+            </summary>
+        </member>
+        <member name="T:Excel.ExcelReaderFactory">
+            <summary>
+            The ExcelReader Factory
+            </summary>
+        </member>
+        <member name="M:Excel.ExcelReaderFactory.CreateBinaryReader(System.IO.Stream)">
+            <summary>
+            Creates an instance of <see cref="T:Excel.ExcelBinaryReader"/>
+            </summary>
+            <param name="fileStream">The file stream.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Excel.ExcelReaderFactory.CreateBinaryReader(System.IO.Stream,Excel.ReadOption)">
+            <summary>
+            Creates an instance of <see cref="T:Excel.ExcelBinaryReader"/>
+            </summary>
+            <param name="fileStream">The file stream.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Excel.ExcelReaderFactory.CreateBinaryReader(System.IO.Stream,System.Boolean)">
+            <summary>
+            Creates an instance of <see cref="T:Excel.ExcelBinaryReader"/>
+            </summary>
+            <param name="fileStream">The file stream.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Excel.ExcelReaderFactory.CreateBinaryReader(System.IO.Stream,System.Boolean,Excel.ReadOption)">
+            <summary>
+            Creates an instance of <see cref="T:Excel.ExcelBinaryReader"/>
+            </summary>
+            <param name="fileStream">The file stream.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Excel.ExcelReaderFactory.CreateOpenXmlReader(System.IO.Stream)">
+            <summary>
+            Creates an instance of <see cref="T:Excel.ExcelOpenXmlReader"/>
+            </summary>
+            <param name="fileStream">The file stream.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Excel.Log.ILog">
+            <summary>
+            Custom interface for logging messages
+            </summary>
+        </member>
+        <member name="M:Excel.Log.ILog.InitializeFor(System.String)">
+            <summary>
+            Initializes the instance for the logger name
+            </summary>
+            <param name="loggerName">Name of the logger</param>
+        </member>
+        <member name="M:Excel.Log.ILog.Debug(System.String,System.Object[])">
+            <summary>
+            Debug level of the specified message. The other method is preferred since the execution is deferred.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="formatting">The formatting.</param>
+        </member>
+        <member name="M:Excel.Log.ILog.Info(System.String,System.Object[])">
+            <summary>
+            Info level of the specified message. The other method is preferred since the execution is deferred.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="formatting">The formatting.</param>
+        </member>
+        <member name="M:Excel.Log.ILog.Warn(System.String,System.Object[])">
+            <summary>
+            Warn level of the specified message. The other method is preferred since the execution is deferred.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="formatting">The formatting.</param>
+        </member>
+        <member name="M:Excel.Log.ILog.Error(System.String,System.Object[])">
+            <summary>
+            Error level of the specified message. The other method is preferred since the execution is deferred.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="formatting">The formatting.</param>
+        </member>
+        <member name="M:Excel.Log.ILog.Fatal(System.String,System.Object[])">
+            <summary>
+            Fatal level of the specified message. The other method is preferred since the execution is deferred.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="formatting">The formatting.</param>
+        </member>
+        <member name="T:Excel.Log.ILog`1">
+            <summary>
+            Ensures a default constructor for the logger type
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Excel.Log.Log">
+            <summary>
+            Logger type initialization
+            </summary>
+        </member>
+        <member name="M:Excel.Log.Log.InitializeWith``1">
+            <summary>
+            Sets up logging to be with a certain type
+            </summary>
+            <typeparam name="T">The type of ILog for the application to use</typeparam>
+        </member>
+        <member name="M:Excel.Log.Log.InitializeWith(Excel.Log.ILog)">
+            <summary>
+            Sets up logging to be with a certain instance. The other method is preferred.
+            </summary>
+            <param name="loggerType">Type of the logger.</param>
+            <remarks>This is mostly geared towards testing</remarks>
+        </member>
+        <member name="M:Excel.Log.Log.GetLoggerFor(System.String)">
+            <summary>
+            Initializes a new instance of a logger for an object.
+            This should be done only once per object name.
+            </summary>
+            <param name="objectName">Name of the object.</param>
+            <returns>ILog instance for an object if log type has been intialized; otherwise null</returns>
+        </member>
+        <member name="T:Excel.Log.Logger.NullLog">
+            <summary>
+            The default logger until one is set.
+            </summary>
+        </member>
+        <member name="T:Excel.Log.LogManager">
+            <summary>
+            2.0 version of LogExtensions, not as awesome as Extension methods
+            </summary>
+        </member>
+        <member name="F:Excel.Log.LogManager._dictionary">
+            <summary>
+            Concurrent dictionary that ensures only one instance of a logger for a type.
+            </summary>
+        </member>
+        <member name="M:Excel.Log.LogManager.Log``1(``0)">
+            <summary>
+            Gets the logger for <see cref="!:T"/>.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="type">The type to get the logger for.</param>
+            <returns>Instance of a logger for the object.</returns>
+        </member>
+        <member name="M:Excel.Log.LogManager.Log(System.String)">
+            <summary>
+            Gets the logger for the specified object name.
+            </summary>
+            <param name="objectName">Either use the fully qualified object name or the short. If used with Log&lt;T&gt;() you must use the fully qualified object name"/></param>
+            <returns>Instance of a logger for the object.</returns>
+        </member>
+    </members>
+</doc>
